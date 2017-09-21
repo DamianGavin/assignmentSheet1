@@ -99,7 +99,7 @@ func seeker() {
 			highest = mid - 1
 		}
 		if lowest > highest {
-			fmt.Printf("Don't be fucking cheating")
+			fmt.Printf("Don't be cheating")
 		}
 	}
 	fmt.Println("Too many guesses!")
