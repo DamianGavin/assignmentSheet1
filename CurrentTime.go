@@ -1,5 +1,6 @@
 //Damian Gavin 14/09/2017
 
+//package required for all programmes
 package main
 
 import (
