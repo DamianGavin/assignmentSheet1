@@ -1,8 +1,6 @@
 //Damian Gavin 20/09/17
 //program to guess a secret number
 
-//Damian Gavin 14/09/17
-
 package main
 
 import (
@@ -11,6 +9,7 @@ import (
 	"math/rand"
 	"os"
 	"strconv"
+	"time"
 )
 
 func askInt(message string) int {
@@ -28,85 +27,33 @@ func askInt(message string) int {
 	}
 }
 
-func askYesHigherLower(message string) int {
-	scanner := bufio.NewScanner(os.Stdin)
-	for {
-		fmt.Printf("%s\n>>", message)
-		scanner.Scan()
-		s := scanner.Text()
-
-		if s == "yes" {
-			return 0
-		}
-		if s == "higher" {
-			return 1
-		}
-		if s == "lower" {
-			return -1
-		}
-		fmt.Printf("Please only enter, 'yes', 'higher', or 'lower'\n")
-	}
-}
-
-func printToN(base int, top int) {
-	for i := base; i <= top; i++ {
-		fmt.Println(i)
-	}
-}
-
-func keeper() {
-
-	var answer int = rand.Intn(100)
+func guessIt() {
+	//seed the number or it will always be the same
+	rand.Seed(time.Now().UnixNano())
+	var answer = rand.Intn(100)
+	//counter for guesses, starts at 1 as they could be right 1st time!
+	i := 1
 
 	fmt.Println("I'm thinking of a number")
 	for {
 		g := askInt("Take a guess")
 		if g == answer {
 			fmt.Println("You got it!")
+			fmt.Printf("\nThe number of attempts was %d", i)
 			return
+
 		}
 		if g < answer {
 			fmt.Println("Nope: Higher")
 		} else {
 			fmt.Println("Nope: Lower")
 		}
+		i++
+
 	}
-}
 
-//ask the user to think of a number
-func seeker() {
-	askYesHigherLower("Say 'yes' when you think of a number between 1 and 100")
-	//loop to keep guessing until we find the answer
-
-	highest := 100
-	lowest := 1
-	for guesses := 0; guesses < 10; guesses++ {
-
-		mid := lowest
-		if highest > lowest {
-			mid = rand.Intn(highest-lowest) + lowest
-		}
-		res := askYesHigherLower("Is it " + strconv.Itoa(mid) +
-			"? - yes, lower or higher?")
-		if res == 0 {
-			fmt.Println("Yay")
-			return
-		}
-		if res > 0 {
-			lowest = mid + 1
-		}
-		if res < 0 {
-			highest = mid - 1
-		}
-		if lowest > highest {
-			fmt.Printf("Don't be cheating")
-		}
-	}
-	fmt.Println("Too many guesses!")
 }
 
 func main() {
-	//printToN(22,29)
-	seeker()
-	keeper()
+	guessIt()
 }
