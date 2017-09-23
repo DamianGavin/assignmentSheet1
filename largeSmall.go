@@ -25,7 +25,6 @@ func main() {
 	for _, v := range x {
 		if v > n {
 
-		} else {
 			n = v
 			smallest = n
 		}
