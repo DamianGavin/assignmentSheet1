@@ -1,5 +1,7 @@
 //Damian Gavin 20/09/17
 //program to guess a secret number
+//and count attempts
+//REF:Story feet on youtube
 
 package main
 
@@ -12,6 +14,7 @@ import (
 	"time"
 )
 
+//this function will verify that an integer is entered
 func askInt(message string) int {
 	scanner := bufio.NewScanner(os.Stdin)
 	for {
@@ -33,15 +36,20 @@ func guessIt() {
 	var answer = rand.Intn(100)
 	//counter for guesses, starts at 1 as they could be right 1st time!
 	i := 1
+	//prevG used to track if number was guessed before
+	prevG := 0
+	fmt.Println("I have a number")
 
-	fmt.Println("I'm thinking of a number")
 	for {
 		g := askInt("Take a guess")
+		if g == prevG {
+			fmt.Println("Sorry, you have already tried that number")
+			i--
+		}
 		if g == answer {
 			fmt.Println("You got it!")
 			fmt.Printf("\nThe number of attempts was %d", i)
 			return
-
 		}
 		if g < answer {
 			fmt.Println("Nope: Higher")
@@ -49,6 +57,7 @@ func guessIt() {
 			fmt.Println("Nope: Lower")
 		}
 		i++
+		prevG = g
 
 	}
 
