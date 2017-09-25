@@ -13,6 +13,7 @@ import (
 //main does the work, getting factorial for a range of
 //numbers(100 in this case)
 
+//calculates factorial of a number. Supports big numbers
 func factorial(n int64) *big.Int {
 	if n < 0 {
 		return big.NewInt(1)
@@ -25,11 +26,15 @@ func factorial(n int64) *big.Int {
 
 }
 
+//main calls factorial() and sums and prints the sum of digits
 func main() {
 	fmt.Println(factorial(100))
-	/* sum := 0
-	for factorial.BitLen() > 0 {
-		factorial.DivMod(factorial, new(big.Int).SetUint64(uint64(10)), n)
-		sum += (n.Uint64())
-	} */
+	sum := big.NewInt(0)
+	n := new (big.Int)//to store the factorial
+	fact := (factorial(100))
+	for fact.BitLen() > 0 {
+		_, n := fact.DivMod(fact, new(big.Int).SetUint64(uint64(10)), n)
+		sum = sum.Add(sum,n)
+	} 
+	fmt.Println(sum)
 }
