@@ -21,24 +21,34 @@ The Ten programs are
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Third year software development at GMIT. This is my first introduction to the **Go** programming language
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+This repository can be found at https://github.com/DamianGavin/assignmentSheet1
 
-## API Reference
+## Running the code
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+First you must have "Go" on your computer. This can be found and downloaded at https://golang.org/.
+If you navigate to the folder that contains these files you can type :
+go run <file name> to run the code.
 
 ## Tests
 
 Describe and show how to run the tests with code examples.
+**EXAMPLE**
+``` PS F:\DataRepAndQuery\assignmentSheet1> go run .\mergeListSort.go
+[1 4 6 2 3 5]
+PS F:\DataRepAndQuery\assignmentSheet1> 
+```
+## Helpful links
 
-## Contributors
+Some links that I used to help me with this assignment 
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+1. https://tour.golang.org/flowcontrol/8
+2. https://www.youtube.com/watch?v=HfJNvH9i9jI
+3. http://wiki.c2.com/?FizzBuzzTest
+4. https://play.golang.org/p/yW7sAyJpPe
+5. http://golangcookbook.com/chapters/strings/reverse/
+6. http://www.golangpro.com/2016/01/check-string-palindrome-go.html
 
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)

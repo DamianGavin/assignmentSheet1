@@ -1,7 +1,7 @@
 //Damian Gavin 20/09/17
 //program to guess a secret number
 //and count attempts
-//REF:Story feet on youtube
+//REF:https://www.youtube.com/watch?v=HfJNvH9i9jI
 
 package main
 

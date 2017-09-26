@@ -6,18 +6,11 @@ package main
 
 import "fmt"
 
-func main() {
-	merge()
+func DoAppendSlices() {
+	myIntSlice := []int{1, 4, 6}
+	myIntSlice = append(myIntSlice, []int{2, 3, 5}...)
+	fmt.Println(myIntSlice)
 }
-
-func merge() {
-	list1 := []int{
-		1, 4, 6,
-	}
-	list2 := []int{
-		2, 3, 5,
-	}
-	out := make(list1, list2)
-
-	fmt.Println(<-out)
+func main() {
+	DoAppendSlices()
 }
