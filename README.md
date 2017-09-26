@@ -37,9 +37,12 @@ go run <file name> to run the code.
 
 Describe and show how to run the tests with code examples.
 **EXAMPLE**
-``` PS F:\DataRepAndQuery\assignmentSheet1> go run .\mergeListSort.go
-[1 4 6 2 3 5]
-PS F:\DataRepAndQuery\assignmentSheet1> 
+``` Windows PowerShell
+Copyright (C) 2016 Microsoft Corporation. All rights reserved.
+
+PS F:\DataRepAndQuery\assignmentSheet1> go run .\reverseString.go
+nivag naimad
+PS F:\DataRepAndQuery\assignmentSheet1>
 ```
 ## Helpful links
 
