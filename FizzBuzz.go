@@ -1,7 +1,8 @@
 //Damian Gavin FizzBuzz 19/09/17
 //This program will print all integers from 1-100
 //and will substitute any factor of 3 with "fizz" and
-//any factor of 5 with "Buzz"
+//any factor of 5 with "Buzz" and the word Fizzbuzz if 
+//the number is divisible by both.
 
 //Adapted from http://wiki.c2.com/?FizzBuzzTest
 
