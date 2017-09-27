@@ -26,7 +26,7 @@ func isP(s string) string {
 	last := len(s) - 1
 	for i := 0; i < mid; i++ {
 		if s[i] != s[last-i] {
-			return "No. That word or string is not a Palimdrome."
+			return "No. That word or string is not a Palindrome."
 		}
 	}
 	return "Yes! You've entered a Palindrome"

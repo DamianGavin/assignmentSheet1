@@ -4,13 +4,20 @@
 
 package main
 
-import ("fmt"
-		"sort")
+import (
+	"fmt"
+	"sort"
+)
 
 func DoAppendSlices() {
-	myIntSlice := []int{1, 4, 6, 9}
-	myIntSlice = append(myIntSlice, []int{2, 3, 5}...)
-	sort.Ints (myIntSlice)
+	myIntSlice := []int{1, 4, 6, 9, 22, 55, 28, -10000000000}
+	myIntSlice = append(myIntSlice, []int{2, 3, 5, 11234}...) //...is a holding
+	//place for elements in the argument, in this case myIntSlice
+
+	//Package sort provides primitives for sorting slices
+	//and user-defined collections.It works ideal here and can handle
+	//any ammount of entries into the arrays
+	sort.Ints(myIntSlice)
 	fmt.Println(myIntSlice)
 }
 func main() {

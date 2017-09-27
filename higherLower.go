@@ -41,23 +41,23 @@ func guessIt() {
 	fmt.Println("I have a number")
 
 	for {
-		g := askInt("Take a guess")
-		if g == prevG {
+		guess := askInt("Take a guess")
+		if guess == prevG {
 			fmt.Println("Sorry, you have already tried that number")
 			i--
 		}
-		if g == answer {
+		if guess == answer {
 			fmt.Println("You got it!")
 			fmt.Printf("\nThe number of attempts was %d", i)
 			return
 		}
-		if g < answer {
+		if guess < answer {
 			fmt.Println("Nope: Higher")
 		} else {
 			fmt.Println("Nope: Lower")
 		}
 		i++
-		prevG = g
+		prevG = guess
 
 	}
 

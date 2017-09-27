@@ -21,6 +21,7 @@ func reverse(s string) string {
 }
 
 func main() {
+	//Can also deal with Japanese text
 
-	fmt.Printf("%v\n", reverse("dこんにちは世界"))
+	fmt.Printf("%v\n", reverse("こんにちは世界"))
 }

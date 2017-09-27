@@ -11,10 +11,10 @@ import "fmt"
 func main() {
 	var n, smallest, biggest int
 	x := []int{
-		48, 96, 86, -68,
-		57, 82, 63, 70,
-		37, 34, 83, -27,
-		19, 97, 9, 17,
+		101, 296, -66, -429,
+		45, 49, 63, 70,
+		37, 509, 83, -27,
+		91, 97, 99, 34,
 		100, 1222223, 1, 3,
 	}
 
@@ -26,11 +26,12 @@ func main() {
 		}
 
 	}
+	//can accomodate negative numbers also
 	fmt.Println("The biggest number is ", biggest)
 
 	for _, v := range x {
 		if v > n {
-
+		} else {
 			n = v
 			smallest = n
 		}

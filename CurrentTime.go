@@ -16,7 +16,7 @@ func main() {
 	t := time.Now()
 	fmt.Println("Welcome to my 2nd go program")
 
-	fmt.Printf("%-2d-%d-%4d Time:%02d:%02d\n",
+	fmt.Printf("/nThe current Date and time are: %-2d-%d-%4d Time:%02d:%02d\n",
 		t.Day(), t.Month(), t.Year(),
 		t.Hour(), t.Minute())
 }
