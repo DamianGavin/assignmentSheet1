@@ -1,7 +1,11 @@
+//Damian Gavin 19/09/17
+//A program to print "Hello World" in Japanese
+//adapted from https://golang.org
+
 package main
 
 import "fmt"
 
 func main() {
-	fmt.Println("日本でもプログラミング入門書の例題にはという文字列がよく使われています")
+	fmt.Println("こんにちは世界")
 }

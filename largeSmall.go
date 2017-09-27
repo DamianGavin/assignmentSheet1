@@ -1,3 +1,9 @@
+//Damian Gavin 20/09/17
+//program to return the largest and
+//smallest element in a list.
+//I have decided to use a list of integers for this problem.
+//Adapted from https://gist.github.com/pyk/10519339
+
 package main
 
 import "fmt"

@@ -4,11 +4,13 @@
 
 package main
 
-import "fmt"
+import ("fmt"
+		"sort")
 
 func DoAppendSlices() {
-	myIntSlice := []int{1, 4, 6}
+	myIntSlice := []int{1, 4, 6, 9}
 	myIntSlice = append(myIntSlice, []int{2, 3, 5}...)
+	sort.Ints (myIntSlice)
 	fmt.Println(myIntSlice)
 }
 func main() {

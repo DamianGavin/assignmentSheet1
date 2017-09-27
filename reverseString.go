@@ -21,5 +21,6 @@ func reverse(s string) string {
 }
 
 func main() {
-	fmt.Printf("%v\n", reverse("damian gavin"))
+
+	fmt.Printf("%v\n", reverse("dこんにちは世界"))
 }

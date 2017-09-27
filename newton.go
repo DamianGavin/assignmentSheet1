@@ -20,10 +20,10 @@ func NewtonsSqrt(x float64) (z float64) {
 	const IniitialZ = 100.0
 	z = InitialZ
 
-	step := func() float64 {
+	step := func() float64 { //makes step the actual mathamatical function
 		return z - (z*z-x)/(2*z)
 	}
-	for zz := step(); math.Abs(zz-z) > Delta; {
+	for zz := step(); math.Abs(zz-z) > Delta; { //abs is the absolute value
 		z = zz
 		zz = step()
 	}
@@ -31,6 +31,6 @@ func NewtonsSqrt(x float64) (z float64) {
 }
 
 func main() {
-	fmt.Println(NewtonsSqrt(500))
-	fmt.Println(math.Sqrt(500)) //callled from math package
+	fmt.Println("\nNewtons answer is:  ", (NewtonsSqrt(1500)))
+	fmt.Println("\nThe Math package answer is:  ", math.Sqrt(1500)) //callled from math package
 }

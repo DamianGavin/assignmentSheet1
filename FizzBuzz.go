@@ -8,16 +8,17 @@
 package main
 
 //import format
-	import "fmt"
+import "fmt"
 
-	func main() {
-		
+func main() {
+
 	fmt.Println("Starting fizzbuzz in Go")
-	c := make([]int, 100)
-	for i := range c {
-		d := i + 1
-		threes := d%3 == 0//if divisible
-		fives := d%5 == 0 //if divisible
+	c := make([]int, 100) //array of size 100 integers
+
+	for i := range c { //range sets i to the product of all ints
+		d := i + 1         //increment
+		threes := d%3 == 0 //if divisible
+		fives := d%5 == 0  //if divisible
 		if threes && fives {
 			fmt.Println("FizzBuzz")
 		} else if threes {
@@ -28,4 +29,4 @@ package main
 			fmt.Println(d)
 		}
 	}
-	}
+}

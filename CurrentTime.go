@@ -1,6 +1,7 @@
 //Damian Gavin 14/09/2017
 //This program will print the current date and time
 //package required for all programmes
+//Adapted from https://tour.golang.org/welcome/1
 package main
 
 import (
