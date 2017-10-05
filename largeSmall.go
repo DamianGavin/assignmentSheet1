@@ -27,7 +27,7 @@ func main() {
 
 	}
 	//can accomodate negative numbers also
-	fmt.Println("The biggest number is ", biggest)
+	fmt.Printf("The biggest number is: %d\n", biggest)
 
 	for _, v := range x {
 		if v > n {
@@ -36,5 +36,5 @@ func main() {
 			smallest = n
 		}
 	}
-	fmt.Println("The smallest number is ", smallest)
+	fmt.Printf("The smallest number is: %d ", smallest)
 }

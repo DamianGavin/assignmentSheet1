@@ -11,8 +11,8 @@ import (
 	"math"
 )
 
-const Delta = 0.0000001
-const InitialZ = 600.0
+const Delta = 0.0000001//for precision
+const InitialZ = 600.0 //float
 
 //This is Newtons method, he approximates Sqrt by picking the starting
 //point z and then repeating: z-(z*z - x)/(2*z)
@@ -31,6 +31,7 @@ func NewtonsSqrt(x float64) (z float64) {
 }
 
 func main() {
-	fmt.Println("\nNewtons answer is:  ", (NewtonsSqrt(1500)))      //Newtons formula
-	fmt.Println("\nThe Math package answer is:  ", math.Sqrt(1500)) //callled from math package
+	//Print out results
+	fmt.Println("\nNewtons answer is:  ", (NewtonsSqrt(64)))      //Newtons formula
+	fmt.Println("\nThe Math package answer is:  ", math.Sqrt(64)) //callled from math package
 }

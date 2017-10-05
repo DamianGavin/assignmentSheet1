@@ -1,6 +1,7 @@
 //Damian Gavin 23/09/17
 //Write a function that merges two sorted lists into a new sorted list.
 // [1,4,6],[2,3,5] → [1,2,3,4,5,6].
+//I have decided to use lists of Integers for this excercise
 
 package main
 

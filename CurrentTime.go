@@ -10,7 +10,7 @@ import (
 )
 
 //I have formatted the time to look like the way
-//we write it here!
+//we write it in Ireland!
 //Just one function
 func main() {
 	t := time.Now()
